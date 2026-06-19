@@ -90,11 +90,12 @@ export class Pterodactyl extends Phaser.Physics.Arcade.Sprite {
     }
     this.setTint(0xFFFFFF);
     this.body.setVelocityX(this.dir * PTERO_SPEED);
-    this.body.setVelocityY(Math.sin(this._time * 0.003) * 40);
     this.y = this._baseY + Math.sin(this._time * 0.003) * 25;
+    this.body.setVelocityY(0);
 
-    if (this.body.blocked.left)  this.dir = 1;
-    if (this.body.blocked.right) this.dir = -1;
+    const bounds = this.scene.physics.world.bounds;
+    if (this.x <= bounds.x + 10)  this.dir = 1;
+    if (this.x >= bounds.right - 10) this.dir = -1;
     this.setFlipX(this.dir < 0);
   }
 
@@ -131,6 +132,8 @@ export class Boulder extends Phaser.Physics.Arcade.Sprite {
     if (!this._alive) return;
     this.body.setVelocityX(-BOULDER_SPEED);
     this.angle -= 3;
+    // Destroy if it rolls off left edge
+    if (this.x < -64) this.destroy();
   }
 
   die() {

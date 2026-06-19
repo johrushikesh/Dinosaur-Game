@@ -147,11 +147,13 @@ export default class GameScene extends Phaser.Scene {
     levelDef.bones.forEach(({ x, y }) => {
       const b = this.bones.create(x, y, 'bone');
       b.setDepth(5);
-      // gentle float
+      // Float the visual sprite only, not the physics body
+      const visual = this.add.image(x, y, 'bone').setDepth(5);
       this.tweens.add({
-        targets: b, y: y - 6, duration: 800 + Math.random() * 200,
+        targets: visual, y: y - 6, duration: 800 + Math.random() * 200,
         yoyo: true, repeat: -1, ease: 'Sine.easeInOut',
       });
+      b.setVisible(false); // hide static body sprite; visual handles display
     });
   }
 
@@ -168,7 +170,7 @@ export default class GameScene extends Phaser.Scene {
   }
 
   _buildEnemies(levelDef) {
-    this.enemies = this.add.group();
+    this.enemies = this.physics.add.group();
 
     levelDef.enemies.forEach(({ type, x, y, dir = 1 }) => {
       let enemy;
