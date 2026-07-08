@@ -2,6 +2,22 @@
 
 A mobile-first dinosaur platformer inspired by Super Mario, built with **Phaser 3** and packaged for iOS & Android via **Capacitor**.
 
+## 🦖 NEW: Rex Arcade — 3 research-driven HTML5 games
+
+Based on market research into the most-played App Store / Play Store games for ages
+10–30 (see [docs/GAME_RESEARCH.md](docs/GAME_RESEARCH.md)), this repo now also ships
+three brand-new, self-contained HTML5 games in [`games/`](games/):
+
+| Game | Genre | DNA (borrowed hooks) |
+|---|---|---|
+| [Sky Dash](games/sky-dash.html) 🏃💨 | Endless lane runner | Subway Surfers lanes · power-ups · skins · daily streaks · missions |
+| [Block Rex](games/block-rex.html) 🧩 | 8×8 block puzzle | Block Blast! core · Tetris clears · combo juice · Wordle-style daily challenge · unlockable themes |
+| [Nova Swarm](games/nova-swarm.html) 🚀 | Survivor arena | Vampire Survivors auto-fire loop · level-up upgrade picks · bosses · unlockable pilots |
+
+Each game is **one HTML file** — no build step, no assets, no network. Open the file
+in a browser (or serve the folder: `npx serve games`) and play. Touch + keyboard both
+work; progress is saved in `localStorage`. Start at the hub: [`games/index.html`](games/index.html).
+
 ## Features
 - **20 levels** across 4 worlds: Jungle · Desert · Ice Cave · Volcano
 - **4 touch buttons**: Left, Right, Jump, Roar

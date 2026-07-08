@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Rex Arcade — 3 Games</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { min-height:100vh; background:linear-gradient(160deg,#0b0b2a,#160b30 60%,#0d1130);
+    font-family:'Segoe UI',system-ui,sans-serif; color:#fff; display:flex; flex-direction:column;
+    align-items:center; padding:40px 18px 60px; gap:10px; }
+  h1 { font-size:min(11vw,54px); font-weight:900; letter-spacing:3px; text-align:center;
+    background:linear-gradient(90deg,#4dffdf,#4d9fff,#c44dff,#ff4d6d,#ffd94d);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    filter:drop-shadow(0 0 20px rgba(120,120,255,.4)); }
+  .tag { color:#9fb5ff; font-size:15px; margin-bottom:22px; text-align:center; max-width:420px; line-height:1.5; }
+  .cards { display:flex; flex-wrap:wrap; gap:18px; justify-content:center; max-width:1000px; }
+  a.card { display:block; width:min(88vw,290px); text-decoration:none; color:#fff;
+    background:rgba(255,255,255,.06); border:1px solid rgba(130,150,255,.25); border-radius:22px;
+    padding:24px 22px 20px; transition:transform .15s, box-shadow .15s; }
+  a.card:hover { transform:translateY(-5px); }
+  .emoji { font-size:44px; }
+  .card h2 { font-size:24px; font-weight:900; margin:10px 0 4px; letter-spacing:1px; }
+  .card .genre { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; }
+  .card p { font-size:13.5px; color:#b9c4ee; line-height:1.55; }
+  .card .dna { margin-top:12px; font-size:11px; color:#8f9cd4; }
+  .card .dna b { color:#cfe0ff; }
+  #c1 { box-shadow:0 0 34px rgba(77,159,255,.14); } #c1 h2,#c1 .genre { color:#4dffdf; }
+  #c2 { box-shadow:0 0 34px rgba(255,157,77,.14); } #c2 h2,#c2 .genre { color:#ffd94d; }
+  #c3 { box-shadow:0 0 34px rgba(196,77,255,.14); } #c3 h2,#c3 .genre { color:#c44dff; }
+  .foot { margin-top:30px; font-size:13px; color:#7d90c9; text-align:center; line-height:1.7; }
+  .foot a { color:#4d9fff; }
+</style>
+</head>
+<body>
+  <h1>🦖 REX ARCADE</h1>
+  <div class="tag">Three brand-new games built from the DNA of the world's most-played mobile hits.
+    Phone-first · one thumb · no install · progress saved on your device.</div>
+
+  <div class="cards">
+    <a class="card" id="c1" href="sky-dash.html">
+      <div class="emoji">🏃💨</div>
+      <h2>SKY DASH</h2>
+      <div class="genre">Endless Runner</div>
+      <p>Swipe between lanes, jump and slide through a neon skyway. Grab coins and power-ups,
+        chase near-misses, unlock skins, keep your daily streak alive.</p>
+      <div class="dna">DNA: <b>Subway Surfers</b> lanes · <b>Jetpack Joyride</b> power-ups ·
+        <b>Monopoly GO!</b> streaks · <b>Fortnite</b> missions</div>
+    </a>
+
+    <a class="card" id="c2" href="block-rex.html">
+      <div class="emoji">🧩✨</div>
+      <h2>BLOCK REX</h2>
+      <div class="genre">Block Puzzle</div>
+      <p>Drag blocks onto the 8×8 board and clear rows &amp; columns. Chain combos for
+        multipliers, beat the seeded Daily Challenge, unlock new themes.</p>
+      <div class="dna">DNA: <b>Block Blast!</b> core · <b>Tetris</b> clears ·
+        <b>Candy Crush</b> juice · <b>Wordle</b> daily</div>
+    </a>
+
+    <a class="card" id="c3" href="nova-swarm.html">
+      <div class="emoji">🚀👾</div>
+      <h2>NOVA SWARM</h2>
+      <div class="genre">Survivor Arena</div>
+      <p>You fire automatically — just keep moving. Survive escalating waves, level up and
+        pick your build, take down bosses, unlock new pilots.</p>
+      <div class="dna">DNA: <b>Vampire Survivors</b> loop · <b>Archero</b> upgrades ·
+        <b>Brawl Stars</b> characters · <b>Survivor.io</b> bosses</div>
+    </a>
+  </div>
+
+  <div class="foot">
+    Built as single-file HTML5 — open any game file directly, or serve this folder.<br>
+    Research &amp; design docs: <a href="../docs/GAME_RESEARCH.md">docs/GAME_RESEARCH.md</a>
+  </div>
+</body>
+</html>
